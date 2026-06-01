@@ -136,30 +136,9 @@ export HTTPS_PROXY="http://proxy-server:port"
 
 ## 实际项目示例
 
-### 示例 1：焊接参数管理应用（React + Cloudflare Pages + D1）
-```bash
-# 1. 克隆并进入项目
-git clone https://github.com/user/welding-params.git
-cd welding-params
 
-# 2. 安装依赖并构建
-npm install
-npm run build
 
-# 3. 设置 API 令牌
-export CLOUDFLARE_API_TOKEN="cfut_..."
-
-# 4. 创建 D1 数据库（可选）
-wrangler d1 create welding-params-db
-
-# 5. 部署
-wrangler pages deploy dist --project-name welding-params
-
-# 6. 设置环境变量
-echo "database_id" | wrangler pages secret put D1_DATABASE_ID --project-name welding-params
-```
-
-### 示例 2：otter-music 音乐应用（React + Vite + Capacitor）
+### 示例 1：otter-music 音乐应用（React + Vite + Capacitor）
 ```bash
 # 1. 克隆项目
 git clone https://github.com/goldenwuhan/otter-music.git
